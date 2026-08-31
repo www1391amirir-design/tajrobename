@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>تجربه‌نامه | هر تجربه، یک درس</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      background: #080808;
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+      background: rgba(8, 8, 8, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      color: #d4af37;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+    .hero {
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 20px;
+      background:
+        radial-gradient(circle at center, rgba(212,175,55,0.13), transparent 40%),
+        #080808;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .badge {
+      display: inline-block;
+      border: 1px solid rgba(212,175,55,0.5);
+      color: #d4af37;
+      padding: 8px 18px;
+      border-radius: 50px;
+      margin-bottom: 25px;
+      font-size: 13px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 8vw, 75px);
+      margin-bottom: 15px;
+      background: linear-gradient(90deg, #f4d675, #d4af37, #fff1a8);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      color: #aaa;
+      font-size: 20px;
+      line-height: 2;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .primary {
+      background: #d4af37;
+      color: #111;
+    }
+
+    .primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(212,175,55,0.2);
+    }
+
+    .secondary {
+      border: 1px solid #555;
+      color: white;
+    }
+
+    .secondary:hover {
+      border-color: #d4af37;
+      color: #d4af37;
+    }
+
+    .section {
+      padding: 70px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #888;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 18px;
+      padding: 25px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(212,175,55,0.5);
+    }
+
+    .card-icon {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #eee;
+    }
+
+    .card p {
+      color: #999;
+      line-height: 1.9;
+      font-size: 14px;
+    }
+
+    .send-box {
+      max-width: 800px;
+      margin: auto;
+      padding: 40px;
+      text-align: center;
+      border: 1px solid rgba(212,175,55,0.25);
+      border-radius: 25px;
+      background: linear-gradient(145deg, #111, #0b0b0b);
+    }
+
+    .send-box h2 {
+      color: #d4af37;
+      margin-bottom: 15px;
+    }
+
+    .send-box p {
+      color: #aaa;
+      line-height: 2;
+      margin-bottom: 25px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      border-top: 1px solid #222;
+      color: #777;
+    }
+
+    footer strong {
+      color: #d4af37;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 17px 5%;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: 70vh;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+
+      .send-box {
+        padding: 25px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">تجربه‌نامه</div>
+
+  <nav>
+    <a href="#home">خانه</a>
+    <a href="#experiences">تجربه‌ها</a>
+    <a href="#send">ارسال تجربه</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+
+    <span class="badge">هر تجربه، یک درس</span>
+
+    <h1>تجربه‌نامه</h1>
+
+    <p class="subtitle">
+      تجربه‌هایت را با دیگران به اشتراک بگذار؛
+      شاید تجربه تو، درس بزرگی برای شخص دیگری باشد.
+    </p>
+
+    <div class="buttons">
+      <a href="#send" class="btn primary">
+        ✍️ ارسال تجربه
+      </a>
+
+      <a href="#experiences" class="btn secondary">
+        📖 مشاهده تجربه‌ها
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="experiences">
+
+  <div class="section-title">
+    <h2>چرا تجربه‌نامه؟</h2>
+    <p>داستان‌های واقعی، درس‌های واقعی</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-icon">🕵️</div>
+      <h3>ارسال ناشناس</h3>
+      <p>
+        می‌توانی تجربه‌ات را بدون نمایش نام و مشخصات شخصی خودت ارسال کنی.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">💡</div>
+      <h3>هر تجربه یک درس</h3>
+      <p>
+        تجربه‌های واقعی می‌توانند به دیگران کمک کنند تصمیم‌های بهتری بگیرند.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🔐</div>
+      <h3>حریم خصوصی</h3>
+      <p>
+        اطلاعات خصوصی مانند شماره تلفن برای نمایش عمومی در سایت قرار نمی‌گیرد.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">✅</div>
+      <h3>بررسی قبل از انتشار</h3>
+      <p>
+        هر تجربه ابتدا توسط مدیر بررسی می‌شود و سپس در سایت منتشر خواهد شد.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="send">
+
+  <div class="send-box">
+
+    <h2>تجربه‌ای برای گفتن داری؟</h2>
+
+    <p>
+      تجربه‌ات را برای ما بفرست.
+      می‌توانی آن را کاملاً ناشناس ارسال کنی.
+      پس از بررسی مدیر، تجربه در سایت منتشر خواهد شد.
+    </p>
+
+    <a href="#" class="btn primary">
+      ✍️ ارسال تجربه
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+  <p>
+    <strong>تجربه‌نامه</strong>
+    — هر تجربه، یک درس
+  </p>
+
+  <br>
+
+  <p>© تمامی حقوق محفوظ است.</p>
+</footer>
+
+</body>
+</html>
