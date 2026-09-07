@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ارسال تجربه | تجربه‌نامه</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Tahoma, sans-serif;
+      background: #0f0f12;
+      color: #ffffff;
+    }
+
+    .صفحه {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    .جعبه ارسال {
+      background: #19191f;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 0 25px rgba(255, 193, 7, 0.08);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .توضیحات {
+      color: #cccccc;
+      line-height: 2;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin: 18px 0 8px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 14px;
+      border: 1px solid #444;
+      border-radius: 12px;
+      background: #101014;
+      color: white;
+      font-family: Tahoma, sans-serif;
+      font-size: 15px;
+    }
+
+    textarea {
+      min-height: 180px;
+      resize: vertical;
+    }
+
+    .ناشناس {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 18px 0;
+    }
+
+    .ناشناس input {
+      width: auto;
+    }
+
+    .دکمه {
+      width: 100%;
+      border: none;
+      border-radius: 12px;
+      padding: 15px;
+      font-size: 17px;
+      cursor: pointer;
+      background: #d9a441;
+      color: #111;
+      font-weight: bold;
+    }
+
+    .بازگشت {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #d9a441;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="صفحه">
+
+    <div class="جعبه ارسال">
+
+      <h1>ارسال تجربه ✍️</h1>
+
+      <p class="توضیحات">
+        تجربه‌ات را برای ما بنویس.
+        می‌توانی آن را کاملاً ناشناس ارسال کنی.
+        پس از بررسی مدیر، تجربه در سایت منتشر خواهد شد.
+      </p>
+
+      <form id="فرم ارسال">
+
+        <label for="نام">نام (اختیاری)</label>
+
+        <input
+          type="text"
+          id="نام"
+          placeholder="اگر دوست داشتی نامت را بنویس"
+        >
+
+        <label for="تجربه">تجربه شما</label>
+
+        <textarea
+          id="تجربه"
+          placeholder="تجربه‌ات را اینجا بنویس..."
+          required
+        ></textarea>
+
+        <label class="ناشناس">
+          <input type="checkbox" id="ارسال ناشناس">
+          ارسال به صورت ناشناس
+        </label>
+
+        <button class="دکمه" type="submit">
+          ارسال تجربه ✍️
+        </button>
+
+      </form>
+
+      <a class="بازگشت" href="index.html">
+        ← بازگشت به صفحه اصلی
+      </a>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
