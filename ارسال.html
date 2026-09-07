@@ -92,6 +92,17 @@
       color: #d9a441;
       text-decoration: none;
     }
+
+    .پیام {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 12px;
+      background: #173d24;
+      color: #9ff0b5;
+      line-height: 2;
+    }
   </style>
 </head>
 
@@ -109,13 +120,20 @@
         پس از بررسی مدیر، تجربه در سایت منتشر خواهد شد.
       </p>
 
-      <form id="فرم ارسال">
+      <form
+        action="https://docs.google.com/forms/d/e/1FAIpQLSffVVmWcHQq96ytu89JQhGmFUAUutqaUW7EI5CBge50w1t7ew/formResponse"
+        method="POST"
+        target="فرم مخفی"
+        id="فرم ارسال"
+        onsubmit="ارسال شد()"
+      >
 
         <label for="نام">نام (اختیاری)</label>
 
         <input
           type="text"
           id="نام"
+          name="entry.1805025819"
           placeholder="اگر دوست داشتی نامت را بنویس"
         >
 
@@ -123,12 +141,18 @@
 
         <textarea
           id="تجربه"
+          name="entry.782202699"
           placeholder="تجربه‌ات را اینجا بنویس..."
           required
         ></textarea>
 
         <label class="ناشناس">
-          <input type="checkbox" id="ارسال ناشناس">
+          <input
+            type="checkbox"
+            id="ارسال ناشناس"
+            name="entry.783837524"
+            value="بله، ناشناس باشد"
+          >
           ارسال به صورت ناشناس
         </label>
 
@@ -138,6 +162,17 @@
 
       </form>
 
+      <div class="پیام" id="پیام">
+        ✅ تجربه‌ات با موفقیت ارسال شد.
+        <br>
+        پس از بررسی مدیر، در سایت منتشر خواهد شد.
+      </div>
+
+      <iframe
+        name="فرم مخفی"
+        style="display:none;"
+      ></iframe>
+
       <a class="بازگشت" href="index.html">
         ← بازگشت به صفحه اصلی
       </a>
@@ -145,6 +180,13 @@
     </div>
 
   </div>
+
+  <script>
+    function ارسال شد() {
+      document.getElementById("پیام").style.display = "block";
+      document.getElementById("فرم ارسال").reset();
+    }
+  </script>
 
 </body>
 </html>
